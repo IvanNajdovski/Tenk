@@ -1,0 +1,263 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+.top {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000; }
+  .top__animation {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; }
+    .top__animation-vertical-right {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(-50%, -50%);
+      height: 8rem;
+      width: 1px;
+      background-color: #2e2e2e;
+      overflow: hidden; }
+      .top__animation-vertical-right.full {
+        height: 100%;
+        transition: all .5s; }
+      .top__animation-vertical-right.move {
+        right: 5rem;
+        height: 100%;
+        transition: right 1s; }
+    .top__animation-vertical-left {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 0rem;
+      width: 1px;
+      background-color: #2e2e2e;
+      overflow: hidden; }
+      .top__animation-vertical-left.move {
+        height: 100%;
+        left: 5rem;
+        height: 100%;
+        transition: left 1s; }
+    .top__animation-vertical {
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 8rem;
+      width: 1px;
+      background-color: #2e2e2e; }
+      .top__animation-vertical.move {
+        display: none;
+        background-color: transparent; }
+      .top__animation-vertical:before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 0;
+        background-color: #e21c61;
+        transform: translateX(-3px);
+        z-index: 1000; }
+      .top__animation-vertical.active:before {
+        height: 8rem;
+        transition: all 1s; }
+      .top__animation-vertical.unactive {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; }
+        .top__animation-vertical.unactive:before {
+          height: 0rem;
+          transition: height 1s; }
+    .top__animation-horizontal-bottom {
+      z-index: 1;
+      overflow: hidden;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8rem;
+      height: 1px;
+      background-color: #2e2e2e; }
+      .top__animation-horizontal-bottom.full {
+        width: 100%;
+        transition: all .5s; }
+      .top__animation-horizontal-bottom.move {
+        left: 5rem;
+        transform: translate(0, 0);
+        bottom: 5rem;
+        transition: bottom 1s; }
+    .top__animation-horizontal-top {
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0rem;
+      height: 1px;
+      background-color: #2e2e2e; }
+      .top__animation-horizontal-top.move {
+        width: 100%;
+        top: 5rem;
+        transition: top 1s; }
+    .top__animation-horizontal {
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8rem;
+      height: 1px;
+      background-color: #2e2e2e; }
+      .top__animation-horizontal.move {
+        display: none;
+        background-color: transparent; }
+      .top__animation-horizontal:before {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 0rem;
+        background-color: #e21c61;
+        transform: translateY(-3px);
+        z-index: 11; }
+      .top__animation-horizontal.active:before {
+        width: 8rem;
+        transition: all 1s; }
+      .top__animation-horizontal.unactive {
+        display: flex;
+        justify-content: flex-end; }
+        .top__animation-horizontal.unactive:before {
+          width: 0rem;
+          transition: width 1s; }
+    .top__animation-box {
+      width: 100%; }
+      .top__animation-box-border-top {
+        position: absolute;
+        padding: 5rem 0;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0; }
+      .top__animation-box-border-side {
+        position: absolute;
+        padding: 0 5rem;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0; }
+
+.top__left {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  border-top: 1px solid #803450;
+  border-left: 1px solid #803450;
+  width: 0rem;
+  height: 0rem;
+  z-index: -2; }
+  .top__left.active {
+    z-index: 10;
+    width: 2rem;
+    height: 2rem;
+    transition: all .8s; }
+
+.bottom__right {
+  position: absolute;
+  bottom: 5rem;
+  right: 5.1rem;
+  border-bottom: 1px solid #803450;
+  border-right: 1px solid #803450;
+  width: 0rem;
+  height: 0rem;
+  z-index: -2; }
+  .bottom__right.active {
+    z-index: 10;
+    width: 2rem;
+    height: 2rem;
+    transition: all .8s; }
+
+.top__right {
+  position: absolute;
+  top: 5rem;
+  right: 5.1rem;
+  border-top: 1px solid #803450;
+  border-right: 1px solid #803450;
+  width: 0rem;
+  height: 0rem;
+  z-index: -2; }
+  .top__right.active {
+    z-index: 10;
+    width: 2rem;
+    height: 2rem;
+    transition: all .8s; }
+
+.bottom__left {
+  position: absolute;
+  bottom: 5rem;
+  left: 5rem;
+  border-bottom: 1px solid #803450;
+  border-left: 1px solid #803450;
+  width: 0rem;
+  height: 0rem;
+  z-index: -2; }
+  .bottom__left.active {
+    z-index: 10;
+    width: 2rem;
+    height: 2rem;
+    transition: all .8s; }
+
+.w3-content {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh; }
+
+.mySlides {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .mySlides.active {
+    opacity: 100;
+    transform: translate(-40%, -50%);
+    transition: transform 6s, opacity 4s; }
+
+.loading__box {
+  position: absolute;
+  top: 50%;
+  left: 15rem;
+  transform: translateY(-50%);
+  visibility: hidden;
+  opacity: 0; }
+  .loading__box.active {
+    visibility: visible;
+    opacity: 100;
+    transition: all .5s; }
+  .loading__box > *:not(:last-child) {
+    margin-bottom: 1.5rem; }
+  .loading__box__bar {
+    border-radius: 15px;
+    width: 3rem;
+    height: 3px;
+    background-color: lightgray; }
+    .loading__box__bar.active {
+      width: 10rem; }
+    .loading__box__bar.pending {
+      width: 10rem;
+      transition: width 12s; }
