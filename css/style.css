@@ -261,3 +261,127 @@ html {
     .loading__box__bar.pending {
       width: 10rem;
       transition: width 12s; }
+
+.logo {
+  z-index: 1000;
+  position: absolute;
+  left: 10rem;
+  top: 10rem;
+  margin-left: -70px;
+  margin-top: -70px;
+  width: 140px;
+  height: 140px;
+  overflow: visible;
+  transform: scale(0.3); }
+  .logo__mainGroup {
+    transform-origin: 35px 35px;
+    animation: mainGroupAnim 9s 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 4s; }
+  .logo__grayGroup {
+    animation: grayGroupAnim 9s 1s;
+    animation-iteration-count: 1;
+    animation-delay: 4s; }
+  .logo__square {
+    stroke: #9E9E9E;
+    stroke-dasharray: 280, 280;
+    stroke-dashoffset: 280;
+    animation: square-anim 9s 1s;
+    animation-iteration-count: 1;
+    animation-delay: 4s; }
+  .logo__stroke {
+    stroke: #803450;
+    stroke-dasharray: 600, 600;
+    stroke-dashoffset: 600;
+    animation: strokeAnim 9s 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-delay: 4s; }
+  .logo__fill {
+    stroke: #803450;
+    stroke-dasharray: 290, 290;
+    stroke-dashoffset: 290;
+    animation: fillAnim 9s 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 4s; }
+
+@keyframes square-anim {
+  12% {
+    stroke-dashoffset: 0; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes mainGroupAnim {
+  26% {
+    transform: rotate(0deg); }
+  33% {
+    transform: rotate(-45deg); }
+  95% {
+    transform: rotate(-45deg);
+    opacity: 1; }
+  100% {
+    transform: rotate(-45deg);
+    opacity: 1; } }
+
+@keyframes grayGroupAnim {
+  33% {
+    opacity: 1; }
+  40% {
+    opacity: 0.5; }
+  70% {
+    opacity: 0.5; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes strokeAnim {
+  33% {
+    stroke-dashoffset: 600; }
+  66% {
+    stroke-dashoffset: 0; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes fillAnim {
+  66% {
+    stroke-dashoffset: 290; }
+  85% {
+    stroke-dashoffset: 0; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes dot {
+  0% {
+    top: 9.8rem;
+    left: 10.6rem; }
+  25% {
+    top: 10.6rem;
+    left: 9.8rem; }
+  50% {
+    top: 9.8rem;
+    left: 8.8rem; }
+  75% {
+    top: 8.8rem;
+    left: 9.8rem; }
+  100% {
+    top: 9.8rem;
+    left: 10.6rem; } }
+
+.logo__dot {
+  position: absolute;
+  top: 8.8rem;
+  left: 9.8rem;
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+  visibility: hidden;
+  opacity: 0; }
+  .logo__dot.active {
+    visibility: visible;
+    opacity: 100;
+    transition: all 1s;
+    background-color: #803450;
+    transform: rotate(45deg);
+    animation: dot 2s linear infinite; }

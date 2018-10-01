@@ -32,6 +32,10 @@ $(document).ready(function(){
     setTimeout(function(){
         $(".loading__box").addClass("active");
     },5000);
+    setTimeout(function(){
+        $(".logo__dot").addClass("active");
+    },7000);
+
 
 
 
