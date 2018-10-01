@@ -338,11 +338,18 @@
       & span{
         font-size: 6rem;
         color: #fff;
+        transform: rotateY(-90deg);
+        float: left;
+        &.active{
+          transform: rotateY(0deg);
+          transition: all .4s;
+          //transition-delay: 1s;
+        }
       }
 
       //& span{
       //  float:left;
-      //  transform: rotateY(90deg) ;
+      //   ;
       //  //transition: all 2s;
       //  //transition-delay: 1s;
       //

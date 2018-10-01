@@ -38,7 +38,33 @@ function carousel() {
         var span = document.createElement("span");
         span.innerText = item
         text[myIndex-1].appendChild(span);
+
+        //span.style.transition = "all 2s linear"
+       // span.classList.add("active");
+
+
+
+
     }
+    setTimeout(function(){
+        var allSpans = document.getElementsByTagName("span");
+        console.log(allSpans)
+        let delay =0;
+        for(let val of allSpans){
+            if(val.innerText === ""){
+                val.style.width = "3rem";
+                val.style.height = "2rem";
+                val.style.content = "";
+                val.style.display = "block";
+
+            }
+            delay = delay + 0.1
+            val.classList.add("active")
+            val.style.transitionDelay = `${delay}s`
+        }
+
+
+    },500)
     console.log(letters);
 
 

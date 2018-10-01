@@ -277,7 +277,12 @@ html {
   z-index: 10000; }
   .top__header-item-header span {
     font-size: 6rem;
-    color: #fff; }
+    color: #fff;
+    transform: rotateY(-90deg);
+    float: left; }
+    .top__header-item-header span.active {
+      transform: rotateY(0deg);
+      transition: all .4s; }
 
 .logo {
   z-index: 1000;
