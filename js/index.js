@@ -34,7 +34,7 @@ $(document).ready(function(){
     },5000);
     setTimeout(function(){
         $(".logo__dot").addClass("active");
-    },7000);
+    },11000);
 
 
 
