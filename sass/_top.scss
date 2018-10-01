@@ -319,3 +319,42 @@
 
   }
 }
+///// -----TOP HEADERS------
+.top__header{
+  &-box {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+  }
+  &-item{
+    &-header {
+      float: left;
+      text-transform: uppercase;
+      font-family: $font-primary;
+      font-weight: 400;
+      font-size: 6rem;
+      color: #fff;
+      z-index: 10000;
+      & span{
+        font-size: 6rem;
+        color: #fff;
+      }
+
+      //& span{
+      //  float:left;
+      //  transform: rotateY(90deg) ;
+      //  //transition: all 2s;
+      //  //transition-delay: 1s;
+      //
+      //}
+      //&:hover > span{
+      //  transform: rotateY(0deg);
+      //  transition: all .5s;
+      //}
+    }
+  }
+}
+//.letter1{
+//  transform: rotateY(90deg);
+//  transition: all .2s;
+//}

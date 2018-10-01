@@ -262,6 +262,23 @@ html {
       width: 10rem;
       transition: width 12s; }
 
+.top__header-box {
+  position: absolute;
+  top: 40%;
+  left: 20%; }
+
+.top__header-item-header {
+  float: left;
+  text-transform: uppercase;
+  font-family: "Chakra Petch";
+  font-weight: 400;
+  font-size: 6rem;
+  color: #fff;
+  z-index: 10000; }
+  .top__header-item-header span {
+    font-size: 6rem;
+    color: #fff; }
+
 .logo {
   z-index: 1000;
   position: absolute;
@@ -354,10 +371,10 @@ html {
 
 @keyframes dot {
   0% {
-    top: 9.8rem;
+    top: 9.6rem;
     left: 10.6rem; }
   25% {
-    top: 10.6rem;
+    top: 10.7rem;
     left: 9.8rem; }
   50% {
     top: 9.8rem;
@@ -366,7 +383,7 @@ html {
     top: 8.8rem;
     left: 9.8rem; }
   100% {
-    top: 9.8rem;
+    top: 9.6rem;
     left: 10.6rem; } }
 
 .logo__dot {
@@ -384,4 +401,4 @@ html {
     transition: all 1s;
     background-color: #803450;
     transform: rotate(45deg);
-    animation: dot 2s linear infinite; }
+    animation: dot 3s linear infinite; }
