@@ -1,4 +1,5 @@
 .top {
+  z-index: -2;
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -259,8 +260,7 @@
   }
 }
 .w3-content{
-  //z-index: -5;
-  //padding: 5rem;
+
   position: relative;
   overflow: hidden;
   width: 100vw;
@@ -268,9 +268,8 @@
 }
 .mySlides{
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-80%,-50%);
+
+  transform: matrix(1,0,0,1,-700,0);
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -279,7 +278,8 @@
   background-position: center;
   &.active{
     opacity: 100;
-    transform: translate(-40%,-50%);
+    transform: matrix(1,0,0,1,0,0) !important;
+
     transition: transform 6s, opacity 4s;
   }
   //&.visible{
@@ -321,6 +321,7 @@
 }
 ///// -----TOP HEADERS------
 .top__header{
+  z-index: 10;
   &-box {
     position: absolute;
     top: 40%;
@@ -328,6 +329,7 @@
   }
   &-item{
     &-header {
+      z-index: 15;
       float: left;
       text-transform: uppercase;
       font-family: $font-primary;
@@ -343,25 +345,120 @@
         &.active{
           transform: rotateY(0deg);
           transition: all .4s;
-          //transition-delay: 1s;
+          //transition-delay: .s;
         }
       }
 
-      //& span{
-      //  float:left;
-      //   ;
-      //  //transition: all 2s;
-      //  //transition-delay: 1s;
-      //
-      //}
-      //&:hover > span{
-      //  transform: rotateY(0deg);
-      //  transition: all .5s;
-      //}
     }
   }
 }
-//.letter1{
-//  transform: rotateY(90deg);
-//  transition: all .2s;
-//}
+.reel__box{
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  right: 8rem;
+  visibility: hidden;
+  opacity: 0;
+
+  &.active{
+    right: 10rem;
+    transform: translateX(-50%);
+    visibility: visible;
+    opacity: 100;
+    transition: all 2s;
+  }
+  &-header{
+
+    color: #fff;
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 1.8rem;
+
+
+  }
+  &:before{
+
+    content: "";
+    display: block;
+    width: 40%;
+    height: .2rem;
+    background-color: lightgray;
+    transform: translate(-2rem, 1.3rem);
+  }
+}
+.about__box{
+  z-index: 10;
+  position: absolute;
+  bottom: 7rem;
+  left: 50%;
+  visibility: hidden;
+  opacity: 0;
+
+  &.active{
+    bottom: 10rem;
+    visibility: visible;
+    opacity: 100;
+    transition: all 2s;
+  }
+  &-header{
+    color: #fff;
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  &:before{
+    display: block;
+    content: "";
+    height: 2rem;
+    width: .2rem;
+    background-color: lightgray;
+    transform: translateX(2.2rem);
+  }
+}
+.see__box{
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 23%;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-53%);
+  &.active{
+    transform: translateX(-50%);
+    visibility: visible;
+    opacity: 100;
+    transition: all 2s;
+  }
+  &-header{
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 1.8rem;
+    &:after{
+      content: "";
+      display: block;
+      height: .2rem;
+      width: 100%;
+      background-color: lightgray;
+    }
+  }
+}
+.mySlides{
+  z-index: 0;
+}
+.mySlides__background{
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  visibility: hidden;
+  opacity: 0;
+  &.active{
+    visibility: visible;
+    opacity: 100;
+    transition: all 4s;
+  }
+}

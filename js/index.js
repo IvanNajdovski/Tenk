@@ -31,10 +31,34 @@ $(document).ready(function(){
      },4000);
     setTimeout(function(){
         $(".loading__box").addClass("active");
+        $(".reel__box").addClass("active");
+        $(".about__box").addClass("active");
+        $(".see__box").addClass("active");
     },5000);
     setTimeout(function(){
         $(".logo__dot").addClass("active");
     },11000);
+
+    $(document).on("mousemove", function(e){
+
+       var pageX = e.pageX;
+       var pageMiddle = $(window).outerWidth()/2
+        //console.logpa
+        if($(".mySlides__background").hasClass("active")){
+            console.log("yes it has")
+            if(pageX > pageMiddle){
+                console.log("yes")
+                $(".mySlides.active").css("transform",`matrix(1,0,0,1,${(pageX-pageMiddle)/20},${(pageX-pageMiddle)/20}`);
+                $(".mySlides__background").css("transform",`matrix(1,0,0,1,-${(pageX-pageMiddle)/20},-${(pageX-pageMiddle)/20}`);
+            }else{
+                $(".mySlides").css("transform",`matrix(1,0,0,1,${(pageX-pageMiddle)/20},${(pageX-pageMiddle)/20}`);
+                $(".mySlides__background").css("transform",`matrix(1,0,0,1,-${(pageX-pageMiddle)/20},-${(pageX-pageMiddle)/20}`);
+            }
+        }
+
+       console.log(pageX)
+
+    });
 
 
 
