@@ -45,9 +45,9 @@ $(document).ready(function(){
        var pageMiddle = $(window).outerWidth()/2
         //console.logpa
         if($(".mySlides__background").hasClass("active")){
-            console.log("yes it has")
+
             if(pageX > pageMiddle){
-                console.log("yes")
+
                 $(".mySlides.active").css("transform",`matrix(1,0,0,1,${(pageX-pageMiddle)/20},${(pageX-pageMiddle)/20}`);
                 $(".mySlides__background").css("transform",`matrix(1,0,0,1,-${(pageX-pageMiddle)/20},-${(pageX-pageMiddle)/20}`);
             }else{
@@ -56,7 +56,7 @@ $(document).ready(function(){
             }
         }
 
-       console.log(pageX)
+
 
     });
 

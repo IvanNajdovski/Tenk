@@ -6,9 +6,16 @@ function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
     var y =document.getElementsByClassName("mySlides__background");
+    var box = document.getElementsByClassName("top__header-box");
+    var see = document.getElementsByClassName("see__box")
     var text = document.getElementsByClassName("top__header-item-header");
     var loadingBar = document.getElementsByClassName("loading__box__bar");
      ////STYLING THE IMAGES THE MINI IMAGES AND THE LIST ITEMS NAMES
+    if(box[0].classList.contains("active")){
+        box[0].classList.remove("active");
+        see[0].classList.remove("active1")
+    }
+
     for (i = 0; i < x.length; i++) {
         // text[i].style.transform = "rotateY(90deg)"
         text[i].style.display = "none"
@@ -69,6 +76,10 @@ function carousel() {
         y[myIndex-1].style.backgroundImage = `url("../img/banner_${myIndex}_background.jpg")`;
         y[myIndex-1].classList.add("active");
     },6000)
+    setTimeout(function(){
+        box[0].classList.add("active");
+        see[0].classList.add("active1");
+    },11000)
 
     x[myIndex-1].style.backgroundImage = `url("../img/banner_${myIndex}.png")`;
     loadingBar[myIndex-1].classList.add("active");

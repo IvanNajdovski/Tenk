@@ -113,6 +113,7 @@
       }
     }
     &-horizontal-top {
+      z-index: 20;
       overflow: hidden;
       position: absolute;
       top: 50%;
@@ -326,6 +327,12 @@
     position: absolute;
     top: 40%;
     left: 20%;
+    &.active{
+      top:45%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .7s;
+    }
   }
   &-item{
     &-header {
@@ -336,7 +343,7 @@
       font-weight: 400;
       font-size: 6rem;
       color: #fff;
-      z-index: 10000;
+      //z-index: 10000;
       & span{
         font-size: 6rem;
         color: #fff;
@@ -423,11 +430,18 @@
   visibility: hidden;
   opacity: 0;
   transform: translateX(-53%);
+
   &.active{
     transform: translateX(-50%);
     visibility: visible;
     opacity: 100;
     transition: all 2s;
+    &.active1{
+      top:55%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .7s;
+    }
   }
   &-header{
     text-transform: uppercase;
