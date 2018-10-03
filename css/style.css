@@ -404,7 +404,8 @@ body {
     transition: visibility 4s, opacity 4s, transform 1s; }
 
 .logo {
-  position: fixed !important; }
+  position: fixed !important;
+  z-index: 10000; }
 
 .logo {
   z-index: 1000;
