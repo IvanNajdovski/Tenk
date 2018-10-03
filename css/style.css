@@ -29,11 +29,10 @@ body {
   width: 100vw;
   background-color: #000; }
   .top__animation {
-    position: relative;
     height: 100vh;
     overflow: hidden; }
     .top__animation-vertical-right {
-      z-index: 1;
+      z-index: 10;
       position: absolute;
       top: 50%;
       right: 50%;
@@ -50,6 +49,7 @@ body {
         height: 100%;
         transition: right 1s; }
     .top__animation-vertical-left {
+      z-index: 10;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -64,7 +64,7 @@ body {
         height: 100%;
         transition: left 1s; }
     .top__animation-vertical {
-      z-index: 2;
+      z-index: 25;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -94,7 +94,7 @@ body {
           height: 0rem;
           transition: height 1s; }
     .top__animation-horizontal-bottom {
-      z-index: 1;
+      z-index: 10;
       overflow: hidden;
       position: absolute;
       bottom: 50%;
@@ -126,7 +126,7 @@ body {
         top: 5rem;
         transition: top 1s; }
     .top__animation-horizontal {
-      z-index: 2;
+      z-index: 25;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -890,11 +890,19 @@ body {
         border: none;
         border-bottom: 1px solid lightgray;
         width: 100%;
-        outline: none; }
+        outline: none;
+        color: #fff;
+        font-size: 2rem; }
+        .form__box__form-item::placeholder {
+          opacity: 0; }
         .form__box__form-item:focus {
           animation: border 1s ease-in-out;
           animation-iteration-count: 1; }
         .form__box__form-item:focus + label {
+          transform: translateY(0);
+          font-size: 1.8rem;
+          transition: all 1s; }
+        .form__box__form-item:not(:placeholder-shown) + label {
           transform: translateY(0);
           font-size: 1.8rem;
           transition: all 1s; }
@@ -963,6 +971,9 @@ body {
     background-color: #fff;
     text-decoration: underline;
     z-index: 2; }
+
+.submit__input {
+  visibility: hidden; }
 
 .footer__box {
   position: relative;
@@ -1040,3 +1051,43 @@ body {
   height: 8px;
   width: 10px;
   background-color: #e21c61; }
+
+.background__front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/banner_1.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 2; }
+
+.background__behind {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/banner_1_background.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 1; }
+
+.background-main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  position: absolute;
+  font-family: "Chakra Petch";
+  font-weight: 400;
+  font-size: 12rem;
+  color: #fff;
+  z-index: 3; }
+
+.top__box {
+  position: relative;
+  align-items: center; }

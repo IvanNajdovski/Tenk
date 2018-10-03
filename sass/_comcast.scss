@@ -1,0 +1,45 @@
+.background{
+  &__front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/banner_1.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+  }
+  &__behind{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/banner_1_background.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+
+  }
+  &-main-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
+    position: absolute;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 12rem;
+    color: #fff;
+    z-index: 3;
+  }
+}
+.top__box{
+  position: relative;
+  //display: flex;
+  //justify-content: center;
+  align-items: center;
+}

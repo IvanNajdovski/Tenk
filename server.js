@@ -9,6 +9,10 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 
+app.get("/comcast", (req,res,next) =>{
+    res.sendFile(path.join(__dirname,"comcast.html"));
+})
+
 app.listen( port, ()=>{
     console.log(`Portal open on port ${port}`);
 })

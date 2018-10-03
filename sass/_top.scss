@@ -5,11 +5,11 @@
   width: 100vw;
   background-color: #000;
   &__animation {
-    position: relative;
+    //position: relative;
     height: 100vh;
     overflow: hidden;
     &-vertical-right {
-      z-index: 1;
+      z-index: 10;
       position: absolute;
       top: 50%;
       right: 50%;
@@ -29,6 +29,7 @@
       }
     }
     &-vertical-left {
+      z-index: 10;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -49,7 +50,7 @@
       }
     }
     &-vertical {
-      z-index: 2;
+      z-index: 25;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -90,7 +91,7 @@
       }
     }
     &-horizontal-bottom {
-      z-index: 1;
+      z-index: 10;
       overflow: hidden;
       position: absolute;
       bottom: 50%;
@@ -132,7 +133,7 @@
       }
     }
     &-horizontal {
-      z-index: 2;
+      z-index: 25;
       position: absolute;
       top: 50%;
       left: 50%;

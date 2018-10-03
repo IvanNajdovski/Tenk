@@ -22,11 +22,21 @@
         border-bottom: 1px solid lightgray;
         width: 100%;
         outline: none;
+        color: #fff;
+        font-size: 2rem;
+        &::placeholder{
+          opacity: 0;
+        }
         &:focus{
           animation: border 1s ease-in-out;
           animation-iteration-count: 1;
         }
         &:focus + label{
+          transform: translateY(0) ;
+          font-size: 1.8rem;
+          transition: all 1s;
+        }
+        &:not(:placeholder-shown) + label{
           transform: translateY(0) ;
           font-size: 1.8rem;
           transition: all 1s;
@@ -119,4 +129,7 @@
 
     z-index: 2;
   }
+}
+.submit__input{
+  visibility: hidden;
 }
