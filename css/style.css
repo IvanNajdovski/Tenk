@@ -439,6 +439,7 @@ body {
     animation-iteration-count: 1;
     animation-delay: 4s; }
   .logo__fill {
+    z-index: 100000;
     stroke: #803450;
     stroke-dasharray: 290, 290;
     stroke-dashoffset: 290;
@@ -511,6 +512,7 @@ body {
     left: 10.6rem; } }
 
 .logo__dot {
+  z-index: 10000;
   position: fixed;
   top: 8.8rem;
   left: 9.8rem;

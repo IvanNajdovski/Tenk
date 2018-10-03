@@ -61,6 +61,7 @@ $fillLen: 290;
   }
 
   &__fill {
+    z-index: 100000;
     stroke: $logoColor;
     stroke-dasharray: $fillLen, $fillLen;
     stroke-dashoffset: $fillLen;
@@ -163,6 +164,7 @@ $fillLen: 290;
   }
 }
 .logo__dot{
+  z-index: 10000;
   position:fixed;
   top: 8.8rem;
   left:9.8rem;
