@@ -404,12 +404,8 @@ body {
     transition: visibility 4s, opacity 4s, transform 1s; }
 
 .logo {
-  position: fixed !important;
-  z-index: 10000; }
-
-.logo {
-  z-index: 1000;
-  position: absolute;
+  z-index: 10000;
+  position: fixed;
   left: 10rem;
   top: 10rem;
   margin-left: -70px;
@@ -515,7 +511,7 @@ body {
     left: 10.6rem; } }
 
 .logo__dot {
-  position: absolute;
+  position: fixed;
   top: 8.8rem;
   left: 9.8rem;
   border-radius: 50%;

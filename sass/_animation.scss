@@ -11,8 +11,8 @@ $strokeLen: 600;
 $fillLen: 290;
 
 .logo {
-  z-index: 1000;
-  position: absolute;
+  z-index: 10000;
+  position: fixed;
   left: 10rem;
   top: 10rem;
   margin-left: $size/-2;
@@ -163,7 +163,7 @@ $fillLen: 290;
   }
 }
 .logo__dot{
-  position:absolute;
+  position:fixed;
   top: 8.8rem;
   left:9.8rem;
   border-radius: 50%;
