@@ -281,7 +281,7 @@
     opacity: 100;
     transform: matrix(1,0,0,1,0,0) !important;
 
-    transition: transform 6s, opacity 4s;
+    transition: transform 4s, opacity 4s;
   }
   //&.visible{
   //  opacity: 100;
@@ -475,6 +475,6 @@
   &.active{
     visibility: visible;
     opacity: 100;
-    transition: all 4s;
+    transition: visibility 4s, opacity 4s, transform 1s ;
   }
 }
