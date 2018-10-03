@@ -9,6 +9,14 @@ html {
   font-size: 62.5%;
   box-sizing: border-box; }
 
+body {
+  background-color: #000; }
+
+.wrapper__center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 120rem; }
+
 .top {
   z-index: -2;
   position: relative;
@@ -512,3 +520,244 @@ html {
     background-color: #803450;
     transform: rotate(45deg);
     animation: dot 3s linear infinite; }
+
+.bottom {
+  z-index: -1;
+  background-color: #000;
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 200px; }
+  .bottom__text {
+    z-index: 2;
+    background-color: #000;
+    margin-top: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .bottom__text__never {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      transform: translateX(-20rem);
+      visibility: hidden;
+      opacity: 0;
+      transition: transform .5s; }
+      .bottom__text__never.active {
+        transform: translateX(-10rem);
+        visibility: visible;
+        opacity: 100;
+        transition: all 1.5s; }
+      .bottom__text__never-fixed {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        flex: 0 1 50%; }
+        .bottom__text__never-fixed-header {
+          flex: 0 0 50%;
+          color: #fff;
+          font-size: 6rem;
+          font-weight: 400;
+          font-family: "Chakra Petch";
+          letter-spacing: .2rem; }
+          .bottom__text__never-fixed-header span {
+            color: #e21c61;
+            background-color: #fff;
+            width: 8rem;
+            padding: 1rem 2rem;
+            letter-spacing: 0; }
+      .bottom__text__never-variable-header {
+        flex: 0 1 50%;
+        width: 450px;
+        color: #fff;
+        font-size: 6rem;
+        font-weight: 400;
+        font-family: "Chakra Petch"; }
+        .bottom__text__never-variable-header span {
+          transition: all .5s;
+          transform: rotateY(-90deg);
+          float: left; }
+          .bottom__text__never-variable-header span.active {
+            transform: rotateY(0deg);
+            transition: all .3s; }
+    .bottom__text__always {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      transform: translateX(10rem);
+      visibility: hidden;
+      opacity: 0;
+      transition: transform .5s; }
+      .bottom__text__always.active {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 100;
+        transition: all 1.5s; }
+      .bottom__text__always-fixed {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        flex: 0 1 50%; }
+        .bottom__text__always-fixed-header {
+          flex: 0 0 50%;
+          color: #fff;
+          font-size: 6rem;
+          font-weight: 400;
+          font-family: "Chakra Petch";
+          letter-spacing: .2rem; }
+          .bottom__text__always-fixed-header span {
+            color: #fff;
+            background-color: #e21c61;
+            width: 8rem;
+            padding: 1rem 2rem;
+            letter-spacing: 0; }
+      .bottom__text__always-variable-header {
+        flex: 0 1 50%;
+        width: 450px;
+        color: #fff;
+        font-size: 6rem;
+        font-weight: 400;
+        font-family: "Chakra Petch"; }
+        .bottom__text__always-variable-header span {
+          transition: all .5s;
+          transform: rotateY(-90deg);
+          float: left; }
+          .bottom__text__always-variable-header span.active {
+            transform: rotateY(0);
+            transition: all .5s; }
+
+.bottom__line {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 5rem;
+  width: 2px;
+  background-color: #fff;
+  transition: height 2s; }
+
+.text {
+  z-index: 20;
+  background-color: #000;
+  margin-bottom: 200px; }
+  .text__box {
+    z-index: 20;
+    background-color: #000;
+    padding: 5rem; }
+    .text__box-header {
+      background-color: #000;
+      z-index: 20;
+      line-height: 5rem;
+      text-align: center;
+      font-family: "Chakra Petch";
+      font-size: 3rem;
+      letter-spacing: .2rem;
+      font-weight: 300;
+      color: #fff; }
+
+.logos {
+  z-index: 2; }
+  .logos-box {
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    background-color: #000; }
+  .logos-boxes {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    flex: 0 0 20%;
+    text-align: center; }
+    .logos-boxes-top {
+      transform: translateY(-2rem);
+      z-index: 5; }
+    .logos-boxes-bottom {
+      transform: translateY(2rem);
+      z-index: 5; }
+    .logos-boxes img {
+      width: 80%;
+      height: auto;
+      object-fit: contain; }
+
+.border {
+  position: absolute; }
+  .border-top {
+    width: 0;
+    height: 1px;
+    background-color: lightgray;
+    top: 0;
+    left: 0; }
+    .border-top.full {
+      width: 100%;
+      transition: all 2s; }
+  .border-bottom {
+    width: 0;
+    height: 1px;
+    background-color: lightgray;
+    bottom: 0;
+    right: 0; }
+    .border-bottom.full {
+      width: 100%;
+      transition: all 2s; }
+  .border-left {
+    width: 1px;
+    height: 0;
+    background-color: lightgray;
+    bottom: 0;
+    left: 0; }
+    .border-left.full {
+      height: 100%;
+      transition: all 2s; }
+  .border-right {
+    width: 1px;
+    height: 0;
+    background-color: lightgray;
+    top: 0;
+    right: 0; }
+    .border-right.full {
+      height: 100%;
+      transition: all 2s; }
+
+.awards {
+  width: 100%;
+  height: 100vh; }
+  .awards__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform: translateX(-5rem); }
+    .awards__box-header {
+      flex: 0 0 20%; }
+      .awards__box-header h1 {
+        position: relative;
+        color: #fff;
+        font-weight: 400;
+        font-size: 17rem;
+        font-family: "Chakra Petch";
+        transform: rotate(-90deg);
+        z-index: 2; }
+        .awards__box-header h1:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 80%;
+          height: 1rem;
+          right: 0;
+          top: 50%;
+          background-color: #e21c61;
+          transform: translateY(100%);
+          z-index: -1; }
+    .awards__box-items {
+      flex: 0 0 20%;
+      display: flex;
+      flex-direction: column; }
+      .awards__box-items-logo {
+        padding-bottom: 4rem; }
+        .awards__box-items-logo img {
+          width: 100%;
+          height: auto;
+          object-fit: cover; }

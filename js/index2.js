@@ -53,12 +53,13 @@ function carousel() {
     var letters = text[myIndex-1].getAttribute("aria-label").split("");
     for(let item of letters){
         var span = document.createElement("span");
+        span.classList.add("top-span")
         span.innerText = item
         text[myIndex-1].appendChild(span);
     }
     setTimeout(function(){
-        var allSpans = document.getElementsByTagName("span");
-        console.log(allSpans)
+        var allSpans = document.getElementsByClassName("top-span");
+
         let delay =0;
         for(let val of allSpans){
             if(val.innerText === ""){
@@ -95,7 +96,7 @@ function carousel() {
 
 
 
-    setTimeout(carousel, 12000); // Change image every 4 seconds
+    setTimeout(carousel, 12000); // Change image every 12 seconds
 
 
 }
