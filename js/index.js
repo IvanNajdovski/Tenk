@@ -119,6 +119,19 @@ $(document).ready(function () {
     $(window).on("resize scroll", function () {
         isScrolledIntoViewClassStay($(".bottom__text__never"));
         isScrolledIntoViewClassStay($(".bottom__text__always"));
+        isScrolledIntoViewClassStay($(".awards__box-header-header"));
+        isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-1"));
+        isScrolledIntoViewClassStay($(".awards__box-header-header"));
+        isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-2"));
+        isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-3"));
+        isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-4"));
+        isScrolledIntoViewClassStay($(".awards_-box-header-logo-img-1"));
+        isScrolledIntoViewClassStay($(".awards_-box-header-logo-img-2"));
+        isScrolledIntoViewClassStay($(".awards_-box-header-logo-img-3"));
+        isScrolledIntoViewClassStay($(".awards_-box-header-logo-img-4"));
+        isScrolledIntoView($(".sayhi__header"));
+
+
         isScrolledIntoViewClassStay($(".border"));
         border($(".border"))
 
@@ -150,7 +163,11 @@ $(document).ready(function () {
         height = docViewBottom - elemTop - 50
         $(".bottom__line").css("height",`${height}px`)
     });
-
+    $(".backtotop").on("click", function(){
+        $("html,body").animate({
+            scrollTop:0,
+        },2000)
+    })
 
 
 

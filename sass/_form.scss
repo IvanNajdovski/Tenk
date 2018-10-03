@@ -1,0 +1,122 @@
+.form{
+   padding: 10rem;
+    &__box{
+    position: relative;
+    z-index: 15;
+    background-color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    &__form{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 6rem;
+      &>*{
+        margin-bottom: 2rem;
+      }
+      &-item{
+        margin-top: 2rem;
+        background-color: transparent;
+        padding: 1rem 2rem;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+        outline: none;
+        &:focus{
+          animation: border 1s ease-in-out;
+          animation-iteration-count: 1;
+        }
+        &:focus + label{
+          transform: translateY(0) ;
+          font-size: 1.8rem;
+          transition: all 1s;
+        }
+
+      }
+      & label{
+        top:0;
+        left:0;
+        position: absolute;
+        display: block;
+        color: #fff;
+        font-size: 2.5rem;
+        font-family: $font-primary;
+        font-weight: 300;
+        transform: translateY(2rem);
+        //&:focused{
+        //  transform: translateY(0rem) scale(0.6);
+        //  transition: all 1s;
+        //
+        //}
+      }
+    }
+  }
+}
+@keyframes border {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.text1__box{
+  position: relative;
+  width: 100%;
+  display: flex;
+
+}
+.send__box{
+
+
+  transform: translateX(-3rem);
+   display: block;
+    position: relative;
+    align-self: flex-end;
+    justify-self: flex-end;
+  & >input{
+    border: none;
+  }
+
+}
+.label__send{
+  position: absolute;
+  font-size: 5rem !important;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  &:hover{
+    color: #e21c61;
+  }
+  &:before{
+    display: block;
+    content: "";
+    height: 1px;
+    width: 4rem;
+    background-color: #fff;
+    transform: translate(-5rem,3.5rem);
+  }
+}
+.email__text{
+
+  font-family: $font-secondary;
+  display: inline-block;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 300;
+  padding: 2rem 0;
+  color:#fff;
+  text-decoration: underline;
+  z-index: 1;
+  margin-bottom: 4rem;
+  & span{
+    color: #000;
+    padding-right: 1rem ;
+    background-color: #fff;
+    text-decoration: underline;
+
+    z-index: 2;
+  }
+}
