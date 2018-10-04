@@ -11,26 +11,50 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section class="top">
-    <div class="top__box">
-    <div class="top__animation">
-        <div class="top__animation-horizontal-bottom active full move"></div>
-        <div class="top__animation-horizontal-top active full move"></div>
-        <div class="top__animation-vertical-right active full move"></div>
-        <div class="top__animation-vertical-left active full move"></div>
-        <div class="top__left top__left active"></div>
-        <div class="top__right active"></div>
-        <div class="bottom__left active"></div>
-        <div class="bottom__right active"></div>
-        <div class="background__front"></div>
-        <div class="background__behind"></div>
-        <h1 class="background-main-header">Comcast Retreat</h1>
-    </div>
-    </div>
-</section>
+<div class="logo__dot"></div>
 
+<svg class="logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70 70"
+     version="1.1">
+    <g class="logo__mainGroup">
+        <g class="logo__grayGroup">
+            <path class="logo__square" fill="none" stroke-width="1" d="M0,0 0,70 70,70 70,0z"/>
+        </g>
+        <g class="logo__colorGroup">
+            <path class="logo__stroke" fill="none" stroke-width="1"
+                  d="M0,70 0,0 0,0 70,0 70,70 70,70 10,70 10,60 10,60 60,60 60,10 10,10 10,60 10,60 10,70 10,70 0,70 0,70"/>
+            <path class="logo__fill" fill="none" stroke-width="10"
+                  d="M5 ,70 5,5 0,5 0,5 65 ,5 65, 65 65, 65 65, 65 5, 65 5"/>
+        </g>
+    </g>
+</svg>
+<section class="top">
+    <!--<a href="http://ivan.com">-->
+    <div class="top__box">
+        <a href="http://facebook.com">
+        <div class="top__animation">
+
+                <div class="top__animation-horizontal-bottom active full move"></div>
+                <div class="top__animation-horizontal-top active full move"></div>
+                <div class="top__animation-vertical-right active full move"></div>
+                <div class="top__animation-vertical-left active full move"></div>
+                <div class="top__left active white"></div>
+                <div class="top__right active white"></div>
+                <div class="bottom__left active white"></div>
+                <div class="bottom__right active white"></div>
+                <div class="background__front"></div>
+                <div class="background__behind"></div>
+                <h1 class="background-main-header">Comcast Retreat </h1>
+
+        </div>
+        </a>
+    </div>
+    <!--</a>-->
+</section>
+<div class="box"></div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="js/index.js"></script>
+<!--//<script src="js/index.js"></script>-->
+<script src="js/comcast.js"></script>
 
 </body>
 </html>

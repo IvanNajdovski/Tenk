@@ -1,8 +1,9 @@
 .top {
-  z-index: -2;
+  z-index: 1;
+  overflow: hidden;
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #000;
   &__animation {
     //position: relative;
@@ -50,7 +51,7 @@
       }
     }
     &-vertical {
-      z-index: 25;
+      z-index: 15;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -70,7 +71,7 @@
         height: 0;
         background-color: #e21c61;
         transform: translateX(-3px);
-        z-index: 1000;
+        z-index: 20;
       }
       &.active {
         &:before {
@@ -211,6 +212,10 @@
     width: 2rem;
     height: 2rem;
     transition: all .8s;
+    &.white{
+      border-top: 1px solid #fff;
+      border-left: 1px solid #fff;
+    }
   }
 }
 .bottom__right{
@@ -227,6 +232,10 @@
     width: 2rem;
     height: 2rem;
     transition: all .8s;
+    &.white{
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+    }
   }
 }
 .top__right{
@@ -243,6 +252,10 @@
     width: 2rem;
     height: 2rem;
     transition: all .8s;
+    &.white{
+      border-top: 1px solid #fff;
+      border-right: 1px solid #fff;
+    }
   }
 }
 .bottom__left{
@@ -259,6 +272,10 @@
     width: 2rem;
     height: 2rem;
     transition: all .8s;
+    &.white{
+      border-bottom: 1px solid #fff;
+      border-left: 1px solid #fff;
+    }
   }
 }
 .w3-content{
@@ -270,7 +287,6 @@
 }
 .mySlides{
   position: absolute;
-
   transform: matrix(1,0,0,1,-700,0);
   width: 100%;
   height: 100%;
@@ -281,7 +297,6 @@
   &.active{
     opacity: 100;
     transform: matrix(1,0,0,1,0,0) !important;
-
     transition: transform 4s, opacity 4s;
   }
   //&.visible{
@@ -292,6 +307,7 @@
 
 }
 .loading__box{
+  z-index: 10;
   position:absolute;
   top: 50%;
   left: 15rem;
@@ -346,7 +362,7 @@
       font-weight: 400;
       font-size: 6rem;
       color: #fff;
-      //z-index: 10000;
+
       & span{
         font-size: 6rem;
         color: #fff;
@@ -355,7 +371,7 @@
         &.active{
           transform: rotateY(0deg);
           transition: all .4s;
-          //transition-delay: .s;
+
         }
       }
 
@@ -426,13 +442,18 @@
   }
 }
 .see__box{
-  z-index: 10;
+  z-index: 10000;
   position: absolute;
   top: 50%;
   left: 23%;
   visibility: hidden;
   opacity: 0;
   transform: translateX(-53%);
+  &-link{
+    text-decoration: none;
+    color: inherit;
+    z-index: 10000;
+  }
 
   &.active{
     transform: translateX(-50%);

@@ -23,10 +23,11 @@ body {
   width: 80rem; }
 
 .top {
-  z-index: -2;
+  z-index: 1;
+  overflow: hidden;
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #000; }
   .top__animation {
     height: 100vh;
@@ -64,7 +65,7 @@ body {
         height: 100%;
         transition: left 1s; }
     .top__animation-vertical {
-      z-index: 25;
+      z-index: 15;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -82,7 +83,7 @@ body {
         height: 0;
         background-color: #e21c61;
         transform: translateX(-3px);
-        z-index: 1000; }
+        z-index: 20; }
       .top__animation-vertical.active:before {
         height: 8rem;
         transition: all 1s; }
@@ -185,6 +186,9 @@ body {
     width: 2rem;
     height: 2rem;
     transition: all .8s; }
+    .top__left.active.white {
+      border-top: 1px solid #fff;
+      border-left: 1px solid #fff; }
 
 .bottom__right {
   position: absolute;
@@ -200,6 +204,9 @@ body {
     width: 2rem;
     height: 2rem;
     transition: all .8s; }
+    .bottom__right.active.white {
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff; }
 
 .top__right {
   position: absolute;
@@ -215,6 +222,9 @@ body {
     width: 2rem;
     height: 2rem;
     transition: all .8s; }
+    .top__right.active.white {
+      border-top: 1px solid #fff;
+      border-right: 1px solid #fff; }
 
 .bottom__left {
   position: absolute;
@@ -230,6 +240,9 @@ body {
     width: 2rem;
     height: 2rem;
     transition: all .8s; }
+    .bottom__left.active.white {
+      border-bottom: 1px solid #fff;
+      border-left: 1px solid #fff; }
 
 .w3-content {
   position: relative;
@@ -252,6 +265,7 @@ body {
     transition: transform 4s, opacity 4s; }
 
 .loading__box {
+  z-index: 10;
   position: absolute;
   top: 50%;
   left: 15rem;
@@ -356,13 +370,17 @@ body {
     transform: translateX(2.2rem); }
 
 .see__box {
-  z-index: 10;
+  z-index: 10000;
   position: absolute;
   top: 50%;
   left: 23%;
   visibility: hidden;
   opacity: 0;
   transform: translateX(-53%); }
+  .see__box-link {
+    text-decoration: none;
+    color: inherit;
+    z-index: 10000; }
   .see__box.active {
     transform: translateX(-50%);
     visibility: visible;
@@ -1056,6 +1074,7 @@ body {
 
 .background__front {
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
   height: 100vh;
@@ -1063,9 +1082,10 @@ body {
   background-image: url("../img/banner_1.png");
   background-position: center;
   background-size: cover;
-  z-index: 2; }
+  z-index: 100000; }
 
 .background__behind {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -1077,6 +1097,7 @@ body {
   z-index: 1; }
 
 .background-main-header {
+  z-index: 1000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1087,8 +1108,12 @@ body {
   font-family: "Chakra Petch";
   font-weight: 400;
   font-size: 12rem;
-  color: #fff;
-  z-index: 3; }
+  color: #fff; }
+
+.box {
+  height: 100vh;
+  width: 100%;
+  background-color: #000; }
 
 .top__box {
   position: relative;
