@@ -1,0 +1,129 @@
+@keyframes avion {
+  0%{
+    transform: translate(100%, -100%);
+  }
+
+  100%{
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes avionReverse {
+  0%{
+    transform: translate(-100%, -100%);
+  }
+
+  100%{
+    transform: translate(0%, 0%);
+  }
+}
+
+.production{
+  &__box{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    height: 25rem;
+    overflow: hidden;
+    &.flex-reverse{
+      justify-content: flex-end;
+    }
+    &-plane{
+      transform: translate(100%, -100%);
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+      &.small{
+        width: 40%;
+      }
+      &.right{
+        transform: translate(-100%, -100%);
+        width: 70%;
+        &.active{
+          animation: avionReverse 2s ease-in;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+        }
+      }
+      &.active{
+        animation: avion 2s ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+
+    }
+
+    &-img{
+      text-align: center;
+      flex: 0 0 40%;
+      overflow: hidden;
+      transition: all 1s;
+
+    }
+    &-line{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: .3rem;
+      width: 1px;
+      background-color: lightgray;
+      z-index: 10;
+
+      &.active{
+        height: 95%;
+        transition: all 2s;
+      }
+      &-bold{
+        z-index: 9;
+        position: absolute;
+        bottom:0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: .8rem;
+        height: .3rem;
+        background-color: #e21c61;
+        &.active{
+          height: 60%;
+          transition: all 2s;
+        }
+      }
+    }
+  }
+  &__text{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.flex-normal{
+      flex-direction: row;
+      align-items: center;
+
+    }
+    &-img{
+      height: 10rem;
+      width: 10rem;
+      &.big{
+        height: 40rem;
+        width: 40rem;
+        margin-right: 4rem;
+        display: flex;
+        align-items: center;
+      }
+      & img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    &-header{
+      text-align: center;
+      font-family: $font-primary;
+      font-size: 4rem;
+      font-weight: 400;
+      padding: 2rem;
+      color: #fff;
+      margin-top: 4rem;
+      line-height: 6rem;
+      letter-spacing: .2rem;
+    }
+  }
+}

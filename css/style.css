@@ -26,10 +26,10 @@ body {
   z-index: 1;
   overflow: hidden;
   position: relative;
-  height: 100vh;
   width: 100%;
   background-color: #000; }
   .top__animation {
+    position: relative;
     height: 100vh;
     overflow: hidden; }
     .top__animation-vertical-right {
@@ -543,7 +543,7 @@ body {
     visibility: visible;
     opacity: 100;
     transition: all 1s;
-    background-color: #803450;
+    background-color: #e21c61;
     transform: rotate(45deg);
     animation: dot 3s linear infinite; }
 
@@ -1081,8 +1081,9 @@ body {
   width: 100%;
   background-image: url("../img/banner_1.png");
   background-position: center;
-  background-size: cover;
-  z-index: 100000; }
+  background-size: contain;
+  z-index: 100;
+  transition: all 2s; }
 
 .background__behind {
   pointer-events: none;
@@ -1093,11 +1094,12 @@ body {
   width: 100%;
   background-image: url("../img/banner_1_background.jpg");
   background-position: center;
-  background-size: cover;
-  z-index: 1; }
+  background-size: contain;
+  z-index: 1;
+  transition: all 2s; }
 
 .background-main-header {
-  z-index: 1000000;
+  z-index: 101;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1111,10 +1113,145 @@ body {
   color: #fff; }
 
 .box {
-  height: 100vh;
+  padding: 1rem;
   width: 100%;
-  background-color: #000; }
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .top__box {
-  position: relative;
   align-items: center; }
+
+.background-bottom {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/comcast/background.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.lines {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+  .lines a {
+    align-self: flex-end; }
+
+.line {
+  margin: .5rem .5rem 0 .5rem;
+  height: 1rem;
+  width: 4px;
+  background-color: lightgray;
+  transition: all 2s; }
+  .line:hover {
+    height: 5rem;
+    transition: all 2s;
+    color: #fff; }
+  .line.active {
+    height: 5rem;
+    color: #fff; }
+
+@keyframes avion {
+  0% {
+    transform: translate(100%, -100%); }
+  100% {
+    transform: translate(0%, 0%); } }
+
+@keyframes avionReverse {
+  0% {
+    transform: translate(-100%, -100%); }
+  100% {
+    transform: translate(0%, 0%); } }
+
+.production__box {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  height: 25rem;
+  overflow: hidden; }
+  .production__box.flex-reverse {
+    justify-content: flex-end; }
+  .production__box-plane {
+    transform: translate(100%, -100%);
+    width: 50%;
+    height: auto;
+    object-fit: cover; }
+    .production__box-plane.small {
+      width: 40%; }
+    .production__box-plane.right {
+      transform: translate(-100%, -100%);
+      width: 70%; }
+      .production__box-plane.right.active {
+        animation: avionReverse 2s ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; }
+    .production__box-plane.active {
+      animation: avion 2s ease-in;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
+  .production__box-img {
+    text-align: center;
+    flex: 0 0 40%;
+    overflow: hidden;
+    transition: all 1s; }
+  .production__box-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: .3rem;
+    width: 1px;
+    background-color: lightgray;
+    z-index: 10; }
+    .production__box-line.active {
+      height: 95%;
+      transition: all 2s; }
+    .production__box-line-bold {
+      z-index: 9;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: .8rem;
+      height: .3rem;
+      background-color: #e21c61; }
+      .production__box-line-bold.active {
+        height: 60%;
+        transition: all 2s; }
+
+.production__text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .production__text.flex-normal {
+    flex-direction: row;
+    align-items: center; }
+  .production__text-img {
+    height: 10rem;
+    width: 10rem; }
+    .production__text-img.big {
+      height: 40rem;
+      width: 40rem;
+      margin-right: 4rem;
+      display: flex;
+      align-items: center; }
+    .production__text-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; }
+  .production__text-header {
+    text-align: center;
+    font-family: "Chakra Petch";
+    font-size: 4rem;
+    font-weight: 400;
+    padding: 2rem;
+    color: #fff;
+    margin-top: 4rem;
+    line-height: 6rem;
+    letter-spacing: .2rem; }
