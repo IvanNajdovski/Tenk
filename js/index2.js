@@ -1,8 +1,23 @@
 var myIndex = 0;
 var myIndexTwo = 0;
-
+// --------------FUNCTION FOR THE LINK SEE MORE--------------
+ function index(a){
+     var link = document.getElementsByClassName("see__box-link");
+     console.log(link)
+     if(a-1===0){
+         link[0].setAttribute("href","/comcast")
+     }else if(a-1===1){
+         link[0].setAttribute("href","/sandals")
+     }else if(a-1===2){
+         link[0].setAttribute("href","/training")
+     }
+     else if(a-1===3){
+         link[0].setAttribute("href","/perlota")
+     }
+ }
 
 function carousel() {
+
     var i;
     var x = document.getElementsByClassName("mySlides");
     var y =document.getElementsByClassName("mySlides__background");
@@ -49,7 +64,7 @@ function carousel() {
     // x[myIndex-1].classList.add("active");
     x[myIndex-1].style.display = "block";
     y[myIndex-1].style.display = "block";
-
+    index(myIndex)
     var letters = text[myIndex-1].getAttribute("aria-label").split("");
     for(let item of letters){
         var span = document.createElement("span");

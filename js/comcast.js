@@ -22,13 +22,30 @@ $(document).ready(function() {
         var page = $(window).outerWidth()/2;
         console.log(mouseX,mouseY)
         if(mouseX > page && mouseY < 600){
-            //console.log("you are on the right");
+
             $(".background__front").css("cursor","url(../img/right-arrow.png), auto");
             $(".background-main-header").css("cursor","url(../img/right-arrow.png), auto");
+            if($(".background-main-header").attr("aria-label")==="Comcast Retreat"){
+                $(".arrow__link").attr("href","/sandals");
+            }else if($(".background-main-header").attr("aria-label")==="Sandals Resort") {
+                $(".arrow__link").attr("href", "/training");
+            }else if($(".background-main-header").attr("aria-label")==="Training Shots") {
+                $(".arrow__link").attr("href", "/perlota");
+            }else if($(".background-main-header").attr("aria-label")==="Cabeza Pelota") {
+                $(".arrow__link").attr("href", "/comcast");
+            }
         }else{
             $(".background__front").css("cursor","url(../img/left-arrow.png), auto");
             $(".background-main-header").css("cursor","url(../img/left-arrow.png), auto");
-            //console.log("you are on the left")
+            if($(".background-main-header").attr("aria-label")==="Comcast Retreat"){
+                $(".arrow__link").attr("href","/perlota");
+            }else if($(".background-main-header").attr("aria-label")==="Sandals Resort") {
+                $(".arrow__link").attr("href", "/comcast");
+            }else if($(".background-main-header").attr("aria-label")==="Training Shots") {
+                $(".arrow__link").attr("href", "/sandals");
+            }else if($(".background-main-header").attr("aria-label")==="Cabeza Pelota") {
+                $(".arrow__link").attr("href", "/training");
+            }
         }
         if(mouseY > 700){
             $("body").css("cursor","unset")
@@ -40,10 +57,7 @@ $(document).ready(function() {
         var item  = $(this).offset();
         var height = $(this).height()/2;
         var width = $(this).width()/2;
-        // console.log(item , " height =",height,"wight =",width);
-        // console.log(eventX)
-        // console.log(eventY)
-        // console.log("mkey")
+
         var offsetX = (width - eventX)/30
         var offsetY = (height - eventY)/30
         $(".background__front").css("transform",`matrix(1,0,0,1,${offsetX},${offsetY}`)
@@ -55,10 +69,6 @@ $(document).ready(function() {
         var item  = $(this).offset();
         var height = $(this).height()/2;
         var width = $(this).width()/2;
-        console.log(item , " height =",height,"wight =",width);
-        console.log(eventX)
-        console.log(eventY)
-        console.log("mkey")
         var offsetX = ((width + item.left) - eventX)/5
         var offsetY = ((height + item.top) - eventY)/5
         $(this).parent("div").css("transform",`matrix(1,0,0,1,${offsetX},${offsetY}`)
@@ -84,4 +94,33 @@ $(document).ready(function() {
         isScrolledIntoView($(".plane-3"));
 
     });
+    var $header=$(".background-main-header");
+    var $text = $(".background-main-header").attr("aria-label").split("");
+    console.log($text)
+
+
+    for(let item of $text){
+        $header.append(`<span class="top-span">${item}</span>`)
+
+    }
+    setTimeout(function(){
+        var allSpans = $(".top-span");
+        console.log(allSpans)
+        let delay =0;
+        for(let val of allSpans){
+            console
+            if(val.innerText === ""){
+
+            val.style.width = "5rem";
+            val.style.height = "4rem";
+            val.style.content = "";
+            val.style.display = "block";
+
+            }
+            val.style.fontSize = "12rem";
+            delay = delay + 0.1
+            val.classList.add("active")
+            val.style.transitionDelay = `${delay}s`
+        }
+    },500);
 });

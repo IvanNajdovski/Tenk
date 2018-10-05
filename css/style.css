@@ -1084,6 +1084,12 @@ body {
   background-size: contain;
   z-index: 100;
   transition: all 2s; }
+  .background__front.training {
+    background-image: url("../img/banner_3.png"); }
+  .background__front.sandals {
+    background-image: url("../img/banner_2.png"); }
+  .background__front.perlota {
+    background-image: url("../img/banner_4.png"); }
 
 .background__behind {
   pointer-events: none;
@@ -1097,6 +1103,12 @@ body {
   background-size: contain;
   z-index: 1;
   transition: all 2s; }
+  .background__behind.training {
+    background-image: url("../img/banner_3_background.jpg"); }
+  .background__behind.sandals {
+    background-image: url("../img/banner_2_background.jpg"); }
+  .background__behind.perlota {
+    background-image: url("../img/banner_4_background.jpg"); }
 
 .background-main-header {
   z-index: 101;
@@ -1111,6 +1123,14 @@ body {
   font-weight: 400;
   font-size: 12rem;
   color: #fff; }
+  .background-main-header span {
+    font-size: 12rem;
+    color: #fff;
+    transform: rotateY(-90deg);
+    float: left; }
+    .background-main-header span.active {
+      transform: rotateY(0deg);
+      transition: all .4s; }
 
 .box {
   padding: 1rem;
@@ -1133,6 +1153,12 @@ body {
   background-image: url("../img/comcast/background.jpg");
   background-size: cover;
   background-position: center; }
+  .background-bottom.training {
+    background-image: url("../img/training/background.jpg"); }
+  .background-bottom.sandals {
+    background-image: url("../img/sandals/background.jpg"); }
+  .background-bottom.perlota {
+    background-image: url("../img/perlota/background.png"); }
 
 .lines {
   display: flex;
@@ -1163,6 +1189,38 @@ body {
   100% {
     transform: translate(0%, 0%); } }
 
+@keyframes pineapple {
+  0% {
+    transform: translate(-100%, 0%); }
+  100% {
+    transform: translate(0%, 0%); } }
+
+@keyframes fish {
+  0% {
+    transform: translate(100%, 0); }
+  100% {
+    transform: translate(0%, 0%); } }
+
+@keyframes football {
+  0% {
+    transform: translate(100%, 0) rotate(0); }
+  100% {
+    transform: translate(0%, 0%) rotate(-360deg); } }
+
+@keyframes ball {
+  0% {
+    transform: translate(0, -200%); }
+  75% {
+    transform: translate(0%, 30%); }
+  90% {
+    transform: translate(0%, 15%); }
+  94% {
+    transform: translate(0%, 10%); }
+  97% {
+    transform: translate(0%, 15%); }
+  100% {
+    transform: translate(0%, 30%); } }
+
 @keyframes avionReverse {
   0% {
     transform: translate(-100%, -100%); }
@@ -1182,11 +1240,38 @@ body {
     width: 50%;
     height: auto;
     object-fit: cover; }
+    .production__box-plane.ball {
+      width: 30%; }
+      .production__box-plane.ball.active {
+        animation: ball 1.5s ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; }
+    .production__box-plane.pineapple {
+      overflow: visible;
+      width: 25%; }
+      .production__box-plane.pineapple.medium {
+        width: 40%; }
+      .production__box-plane.pineapple.active {
+        animation: pineapple 1.5s ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; }
     .production__box-plane.small {
       width: 40%; }
     .production__box-plane.right {
       transform: translate(-100%, -100%);
       width: 70%; }
+      .production__box-plane.right.medium {
+        width: 30%; }
+      .production__box-plane.right.fish.active {
+        animation: fish 2s ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; }
+      .production__box-plane.right.football {
+        width: 50%; }
+        .production__box-plane.right.football.active {
+          animation: football 2s ease-in;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards; }
       .production__box-plane.right.active {
         animation: avionReverse 2s ease-in;
         animation-iteration-count: 1;
@@ -1196,6 +1281,9 @@ body {
       animation-iteration-count: 1;
       animation-fill-mode: forwards; }
   .production__box-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     flex: 0 0 40%;
     overflow: hidden;

@@ -7,6 +7,54 @@
     transform: translate(0%, 0%);
   }
 }
+@keyframes pineapple {
+  0%{
+    transform: translate(-100%, 0%);
+  }
+
+  100%{
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes fish {
+  0%{
+    transform: translate(100%, 0);
+  }
+
+  100%{
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes football {
+  0%{
+    transform: translate(100%, 0) rotate(0);
+  }
+
+  100%{
+    transform: translate(0%, 0%) rotate(-360deg);
+  }
+}
+@keyframes ball {
+  0%{
+    transform: translate(0, -200%);
+  }
+  75%{
+    transform: translate(0%, 30%);
+  }
+  90%{
+    transform: translate(0%, 15%);
+  }
+  94%{
+    transform: translate(0%, 10%);
+  }
+  97%{
+    transform: translate(0%, 15%);
+  }
+
+  100%{
+    transform: translate(0%, 30%);
+  }
+}
 @keyframes avionReverse {
   0%{
     transform: translate(-100%, -100%);
@@ -32,12 +80,51 @@
       width: 50%;
       height: auto;
       object-fit: cover;
+      &.ball{
+        width: 30%;
+        &.active{
+          animation: ball 1.5s ease-in;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+        }
+      }
+      &.pineapple{
+        overflow: visible;
+        width: 25%;
+        &.medium{
+          width: 40%;
+        }
+        &.active{
+          animation: pineapple 1.5s ease-in;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+        }
+      }
+
       &.small{
         width: 40%;
       }
       &.right{
         transform: translate(-100%, -100%);
         width: 70%;
+        &.medium{
+          width: 30%;
+        }
+        &.fish{
+          &.active{
+            animation: fish 2s ease-in;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+          }
+        }
+        &.football{
+          width: 50%;
+          &.active{
+            animation: football 2s ease-in;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+          }
+        }
         &.active{
           animation: avionReverse 2s ease-in;
           animation-iteration-count: 1;
@@ -53,6 +140,9 @@
     }
 
     &-img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       flex: 0 0 40%;
       overflow: hidden;

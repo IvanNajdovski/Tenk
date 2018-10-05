@@ -11,7 +11,16 @@ app.use(express.static(publicPath));
 
 app.get("/comcast", (req,res,next) =>{
     res.sendFile(path.join(__dirname,"comcast.html"));
-})
+});
+app.get("/sandals", (req,res,next) =>{
+    res.sendFile(path.join(__dirname,"sandals.html"));
+});
+app.get("/training", (req,res,next) =>{
+    res.sendFile(path.join(__dirname,"training.html"));
+});
+app.get("/perlota", (req,res,next) =>{
+    res.sendFile(path.join(__dirname,"perlota.html"));
+});
 
 app.listen( port, ()=>{
     console.log(`Portal open on port ${port}`);

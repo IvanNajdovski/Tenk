@@ -11,6 +11,15 @@
     background-size: contain;
     z-index: 100;
     transition: all 2s;
+    &.training{
+      background-image: url("../img/banner_3.png");
+    }
+    &.sandals{
+      background-image: url("../img/banner_2.png");
+    }
+    &.perlota{
+      background-image: url("../img/banner_4.png");
+    }
    
   }
   &__behind{
@@ -25,6 +34,15 @@
     background-size: contain;
     z-index: 1;
     transition: all 2s;
+    &.training{
+      background-image: url("../img/banner_3_background.jpg");
+    }
+    &.sandals{
+      background-image: url("../img/banner_2_background.jpg");
+    }
+    &.perlota{
+      background-image: url("../img/banner_4_background.jpg");
+    }
 
 
   }
@@ -41,6 +59,17 @@
     font-weight: 400;
     font-size: 12rem;
     color: #fff;
+    & span{
+      font-size: 12rem;
+      color: #fff;
+      transform: rotateY(-90deg);
+      float: left;
+      &.active{
+        transform: rotateY(0deg);
+        transition: all .4s;
+
+      }
+    }
     //z-index: 3;
 
 
@@ -72,6 +101,15 @@
   background-image: url("../img/comcast/background.jpg");
   background-size: cover;
   background-position: center;
+  &.training{
+    background-image: url("../img/training/background.jpg");
+  }
+  &.sandals{
+    background-image: url("../img/sandals/background.jpg");
+  }
+  &.perlota{
+    background-image: url("../img/perlota/background.png");
+}
 }
 .lines{
   display: flex;
