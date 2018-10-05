@@ -136,10 +136,10 @@ $(document).ready(function () {
         isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-2"));
         isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-3"));
         isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-4"));
-        isScrolledIntoViewClassStay($(".awards_-box-header-logo-img-1"));
-        isScrolledIntoViewClassStay($(".awards_-box-header-logo-img-2"));
-        isScrolledIntoViewClassStay($(".awards_-box-header-logo-img-3"));
-        isScrolledIntoViewClassStay($(".awards_-box-header-logo-img-4"));
+        isScrolledIntoView($(".awards_-box-header-logo-img-1"));
+        isScrolledIntoView($(".awards_-box-header-logo-img-2"));
+        isScrolledIntoView($(".awards_-box-header-logo-img-3"));
+        isScrolledIntoView($(".awards_-box-header-logo-img-4"));
         isScrolledIntoView($(".sayhi__header"));
 
 
