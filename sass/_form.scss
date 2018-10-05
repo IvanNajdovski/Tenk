@@ -98,7 +98,7 @@
 
   cursor: pointer;
   &:hover{
-    color: #e21c61;
+    color: $color-primary;
   }
   &:before{
     display: block;

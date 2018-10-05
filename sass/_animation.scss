@@ -1,5 +1,5 @@
 $strokeColor: #9E9E9E;
-$logoColor: #803450;
+$logoColor: $color-primary;
 $size: 140px;
 $totalAnim: 9s;
 $delay: 1s;
@@ -179,7 +179,7 @@ $fillLen: 290;
     opacity: 100;
     transition: all 1s;
 
-    background-color: #e21c61;
+    background-color: $color-primary;
     transform: rotate(45deg);
     animation: dot 3s linear infinite;
 

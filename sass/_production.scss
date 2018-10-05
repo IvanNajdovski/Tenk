@@ -170,7 +170,7 @@
         transform: translateX(-50%);
         width: .8rem;
         height: .3rem;
-        background-color: #e21c61;
+        background-color: $color-primary;
         &.active{
           height: 60%;
           transition: all 2s;

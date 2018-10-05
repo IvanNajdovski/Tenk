@@ -43,7 +43,7 @@
           font-family:  $font-primary;
           letter-spacing: .2rem;
           & span {
-            color: #e21c61;
+            color: $color-primary;
             background-color: #fff;
             width: 8rem;
             padding: 1rem 2rem;
@@ -105,7 +105,7 @@
           letter-spacing: .2rem;
           & span {
             color: #fff;
-            background-color: #e21c61;
+            background-color: $color-primary;
             width: 8rem;
             padding: 1rem 2rem;
             letter-spacing: 0;

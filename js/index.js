@@ -56,6 +56,17 @@ function leterChange(a,b) {
 
 
 }
+var link = window.location.href
+var about = link.split("/")
+if(about[about.length-1]=== "#about"){
+    $("html,body").animate({
+      scrollTop: $("#about").offset().top,
+    },1000);
+}else if(about[about.length-1]=== "#contact"){
+    $("html,body").animate({
+        scrollTop: $("#contact").offset().top,
+    },2000);
+}
 
 
 $(document).ready(function () {
@@ -136,6 +147,19 @@ $(document).ready(function () {
         border($(".border"))
 
 
+    });
+//------ LINK ANIMATION --------
+    $(".about__box-link").on("click", function(e){
+        if(this.hash !==""){
+            e.preventDefault()
+            var hash = this.hash
+            console.log($(hash).offset().top)
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            },1000,function(){
+                window.location.hash = hash;
+            });
+        }
     });
 
     // -----------------DONT KNOW WHY THIS CODE HAD BUGS BUT IT SHOULD BE EQUAL TO THE ONE BELLOW---------------

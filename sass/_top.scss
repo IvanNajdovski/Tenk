@@ -69,7 +69,7 @@
         display: block;
         width: 5px;
         height: 0;
-        background-color: #e21c61;
+        background-color: $color-primary;
         transform: translateX(-3px);
         z-index: 20;
       }
@@ -153,7 +153,7 @@
         display: block;
         height: 5px;
         width: 0rem;
-        background-color: #e21c61;
+        background-color: $color-primary;
         transform: translateY(-3px);
         z-index: 11;
 
@@ -202,8 +202,8 @@
   position: absolute;
   top:5rem;
   left:5rem;
-  border-top: 1px solid #803450;
-  border-left: 1px solid #803450;
+  border-top: 1px solid $color-primary;
+  border-left: 1px solid $color-primary;
   width: 0rem;
   height: 0rem;
   z-index: -2;
@@ -222,8 +222,8 @@
   position: absolute;
   bottom:5rem;
   right:5.1rem;
-  border-bottom: 1px solid #803450;
-  border-right: 1px solid #803450;
+  border-bottom: 1px solid $color-primary;
+  border-right: 1px solid $color-primary;
   width: 0rem;
   height: 0rem;
   z-index: -2;
@@ -242,8 +242,8 @@
   position: absolute;
   top:5rem;
   right:5.1rem;
-  border-top: 1px solid #803450;
-  border-right: 1px solid #803450;
+  border-top: 1px solid $color-primary;
+  border-right: 1px solid $color-primary;
   width: 0rem;
   height: 0rem;
   z-index: -2;
@@ -262,8 +262,8 @@
   position: absolute;
   bottom:5rem;
   left:5rem;
-  border-bottom: 1px solid #803450;
-  border-left: 1px solid #803450;
+  border-bottom: 1px solid $color-primary;
+  border-left: 1px solid $color-primary;
   width: 0rem;
   height: 0rem;
   z-index: -2;
@@ -419,6 +419,10 @@
   left: 50%;
   visibility: hidden;
   opacity: 0;
+  &-link{
+    text-decoration: none;
+    color: inherit;
+  }
 
   &.active{
     bottom: 10rem;
