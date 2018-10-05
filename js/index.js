@@ -131,11 +131,11 @@ $(document).ready(function () {
         isScrolledIntoViewClassStay($(".bottom__text__never"));
         isScrolledIntoViewClassStay($(".bottom__text__always"));
         isScrolledIntoViewClassStay($(".awards__box-header-header"));
-        isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-1"));
+        isScrolledIntoView($(".awards__box-items-logo-curtain-1"));
         isScrolledIntoViewClassStay($(".awards__box-header-header"));
-        isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-2"));
-        isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-3"));
-        isScrolledIntoViewClassStay($(".awards__box-items-logo-curtain-4"));
+        isScrolledIntoView($(".awards__box-items-logo-curtain-2"));
+        isScrolledIntoView($(".awards__box-items-logo-curtain-3"));
+        isScrolledIntoView($(".awards__box-items-logo-curtain-4"));
         isScrolledIntoView($(".awards_-box-header-logo-img-1"));
         isScrolledIntoView($(".awards_-box-header-logo-img-2"));
         isScrolledIntoView($(".awards_-box-header-logo-img-3"));

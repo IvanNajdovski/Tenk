@@ -23,25 +23,44 @@
       visibility: hidden;
       opacity: 0;
       transition: transform .5s;
+      @media only screen and (max-width: $bp-large-small){
+        flex-direction: column;
+        transform: translateX(0);
+      }
       &.active{
         transform: translateX(-10rem);
         visibility: visible;
         opacity: 100;
         transition: all 1.5s;
+        @media only screen and (max-width: $bp-large-small){
+          transform: translateX(0);
+        }
       }
       &-fixed {
         width: 400px;
         display: flex;
         justify-content: center;
         flex: 0 1 50%;
+        @media only screen and (max-width: $bp-large-small){
+          width: 90%;
+          flex: 1;
+          align-items: center;
+        }
 
         &-header {
+
           flex: 0 0 50%;
           color: #fff;
           font-size: 6rem;
           font-weight: 400;
           font-family:  $font-primary;
           letter-spacing: .2rem;
+          @media only screen and (max-width: $bp-large-small){
+            flex: 1;
+          }
+          @media only screen and (max-width: $bp-large-small){
+            text-align: center;
+          }
           & span {
             color: $color-primary;
             background-color: #fff;
@@ -60,6 +79,12 @@
           font-size: 6rem;
           font-weight: 400;
           font-family: $font-primary;
+          @media only screen and (max-width: $bp-large-small){
+            width: 90%;
+            flex: 1;
+            text-align: center;
+            padding-top: 2rem;
+          }
           &  span{
             transition: all .5s;
             transform: rotateY(-90deg);
@@ -85,6 +110,10 @@
       visibility: hidden;
       opacity: 0;
       transition: transform .5s;
+      @media only screen and (max-width: $bp-large-small){
+        flex-direction: column;
+        transform: translateY(0);
+      }
       &.active{
         transform: translateX(0);
         visibility: visible;
@@ -96,6 +125,11 @@
         display: flex;
         justify-content: center;
         flex: 0 1 50%;
+        @media only screen and (max-width: $bp-large-small){
+          width: 90%;
+          flex: 1;
+          align-items: center;
+        }
         &-header {
           flex: 0 0 50%;
           color: #fff;
@@ -103,6 +137,11 @@
           font-weight: 400;
           font-family:  $font-primary;
           letter-spacing: .2rem;
+          @media only screen and (max-width: $bp-large-small){
+
+            flex: 1;
+            text-align: center;
+          }
           & span {
             color: #fff;
             background-color: $color-primary;
@@ -120,6 +159,12 @@
           font-size: 6rem;
           font-weight: 400;
           font-family:  $font-primary;
+          @media only screen and (max-width: $bp-large-small){
+            width: 90%;
+            flex: 1;
+            text-align: center;
+            padding-top: 2rem;
+          }
           &  span{
             transition: all .5s;
             transform: rotateY(-90deg);

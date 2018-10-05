@@ -8,6 +8,12 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
 
 body {
   background-color: #000; }
@@ -16,11 +22,38 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 120rem; }
+  @media only screen and (max-width: 75em) {
+    .wrapper__center {
+      width: 100rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .wrapper__center {
+      width: 80rem; } }
+  @media only screen and (max-width: 50em) {
+    .wrapper__center {
+      width: 60rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .wrapper__center {
+      width: 40rem; } }
+  @media only screen and (max-width: 25em) {
+    .wrapper__center {
+      width: 100%; } }
 
 .wrapper__small {
   margin-left: auto;
   margin-right: auto;
   width: 80rem; }
+  @media only screen and (max-width: 62.5em) {
+    .wrapper__small {
+      width: 70rem; } }
+  @media only screen and (max-width: 50em) {
+    .wrapper__small {
+      width: 50rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .wrapper__small {
+      width: 40rem; } }
+  @media only screen and (max-width: 25em) {
+    .wrapper__small {
+      width: 100%; } }
 
 .top {
   z-index: 1;
@@ -272,6 +305,12 @@ body {
   transform: translateY(-50%);
   visibility: hidden;
   opacity: 0; }
+  @media only screen and (max-width: 1300px) {
+    .loading__box {
+      left: 12rem; } }
+  @media only screen and (max-width: 75em) {
+    .loading__box {
+      left: 10rem; } }
   .loading__box.active {
     visibility: visible;
     opacity: 100;
@@ -296,6 +335,9 @@ body {
     position: absolute;
     top: 40%;
     left: 20%; }
+    @media only screen and (max-width: 75em) {
+      .top__header-box {
+        left: 22rem; } }
     .top__header-box.active {
       top: 45%;
       opacity: 0;
@@ -380,6 +422,9 @@ body {
   visibility: hidden;
   opacity: 0;
   transform: translateX(-53%); }
+  @media only screen and (max-width: 62.5em) {
+    .see__box {
+      left: 27rem; } }
   .see__box-link {
     text-decoration: none;
     color: inherit;
@@ -572,16 +617,28 @@ body {
       visibility: hidden;
       opacity: 0;
       transition: transform .5s; }
+      @media only screen and (max-width: 50em) {
+        .bottom__text__never {
+          flex-direction: column;
+          transform: translateX(0); } }
       .bottom__text__never.active {
         transform: translateX(-10rem);
         visibility: visible;
         opacity: 100;
         transition: all 1.5s; }
+        @media only screen and (max-width: 50em) {
+          .bottom__text__never.active {
+            transform: translateX(0); } }
       .bottom__text__never-fixed {
         width: 400px;
         display: flex;
         justify-content: center;
         flex: 0 1 50%; }
+        @media only screen and (max-width: 50em) {
+          .bottom__text__never-fixed {
+            width: 90%;
+            flex: 1;
+            align-items: center; } }
         .bottom__text__never-fixed-header {
           flex: 0 0 50%;
           color: #fff;
@@ -589,6 +646,12 @@ body {
           font-weight: 400;
           font-family: "Chakra Petch";
           letter-spacing: .2rem; }
+          @media only screen and (max-width: 50em) {
+            .bottom__text__never-fixed-header {
+              flex: 1; } }
+          @media only screen and (max-width: 50em) {
+            .bottom__text__never-fixed-header {
+              text-align: center; } }
           .bottom__text__never-fixed-header span {
             color: #D5008D;
             background-color: #fff;
@@ -602,6 +665,12 @@ body {
         font-size: 6rem;
         font-weight: 400;
         font-family: "Chakra Petch"; }
+        @media only screen and (max-width: 50em) {
+          .bottom__text__never-variable-header {
+            width: 90%;
+            flex: 1;
+            text-align: center;
+            padding-top: 2rem; } }
         .bottom__text__never-variable-header span {
           transition: all .5s;
           transform: rotateY(-90deg);
@@ -618,6 +687,10 @@ body {
       visibility: hidden;
       opacity: 0;
       transition: transform .5s; }
+      @media only screen and (max-width: 50em) {
+        .bottom__text__always {
+          flex-direction: column;
+          transform: translateY(0); } }
       .bottom__text__always.active {
         transform: translateX(0);
         visibility: visible;
@@ -628,6 +701,11 @@ body {
         display: flex;
         justify-content: center;
         flex: 0 1 50%; }
+        @media only screen and (max-width: 50em) {
+          .bottom__text__always-fixed {
+            width: 90%;
+            flex: 1;
+            align-items: center; } }
         .bottom__text__always-fixed-header {
           flex: 0 0 50%;
           color: #fff;
@@ -635,6 +713,10 @@ body {
           font-weight: 400;
           font-family: "Chakra Petch";
           letter-spacing: .2rem; }
+          @media only screen and (max-width: 50em) {
+            .bottom__text__always-fixed-header {
+              flex: 1;
+              text-align: center; } }
           .bottom__text__always-fixed-header span {
             color: #fff;
             background-color: #D5008D;
@@ -648,6 +730,12 @@ body {
         font-size: 6rem;
         font-weight: 400;
         font-family: "Chakra Petch"; }
+        @media only screen and (max-width: 50em) {
+          .bottom__text__always-variable-header {
+            width: 90%;
+            flex: 1;
+            text-align: center;
+            padding-top: 2rem; } }
         .bottom__text__always-variable-header span {
           transition: all .5s;
           transform: rotateY(-90deg);

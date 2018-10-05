@@ -314,6 +314,12 @@
   transform: translateY(-50%);
   visibility: hidden;
   opacity: 0;
+  @media only screen and (max-width: 1300px){
+    left:12rem;
+  }
+  @media only screen and (max-width: $bp-large){
+    left:10rem;
+  }
   &.active{
     visibility: visible;
     opacity: 100;
@@ -346,6 +352,10 @@
     position: absolute;
     top: 40%;
     left: 20%;
+    @media only screen and (max-width: $bp-large){
+
+      left: 22rem;
+    }
     &.active{
       top:45%;
       opacity: 0;
@@ -453,6 +463,18 @@
   visibility: hidden;
   opacity: 0;
   transform: translateX(-53%);
+  @media only screen and(max-width: $bp-large-medium){
+    left: 27rem;
+  }
+  //@media only screen and(max-width: $bp-large-small){
+  //  width:60rem;
+  //}
+  //@media only screen and(max-width: $bp-medium){
+  //  width:40rem;
+  //}
+  //@media only screen and(max-width: $bp-small){
+  //  width:100%;
+  //}
   &-link{
     text-decoration: none;
     color: inherit;
