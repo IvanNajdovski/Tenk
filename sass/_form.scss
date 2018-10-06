@@ -1,5 +1,11 @@
 .form{
    padding: 10rem;
+  @media only screen and(max-width: $bp-medium){
+    padding: 5rem;
+  }
+  @media only screen and(max-width: $bp-small){
+    padding: 2rem;
+  }
     &__box{
     position: relative;
     z-index: 15;
@@ -121,6 +127,12 @@
   text-decoration: underline;
   z-index: 1;
   margin-bottom: 4rem;
+  @media only screen and(max-width: $bp-medium){
+    font-size: 5rem;
+  }
+  @media only screen and(max-width: $bp-small){
+    font-size: 3rem;
+  }
   & span{
     color: #000;
     padding-right: 1rem ;

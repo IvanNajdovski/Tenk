@@ -13,56 +13,78 @@
 <body>
 <div class="logo__dot"></div>
 <a href="/">
-<svg class="logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70 70"
-     version="1.1">
-    <g class="logo__mainGroup">
-        <g class="logo__grayGroup">
-            <path class="logo__square" fill="none" stroke-width="1" d="M0,0 0,70 70,70 70,0z"/>
+    <svg class="logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70 70"
+         version="1.1">
+        <g class="logo__mainGroup">
+            <g class="logo__grayGroup">
+                <path class="logo__square" fill="none" stroke-width="1" d="M0,0 0,70 70,70 70,0z"/>
+            </g>
+            <g class="logo__colorGroup">
+                <path class="logo__stroke" fill="none" stroke-width="1"
+                      d="M0,70 0,0 0,0 70,0 70,70 70,70 10,70 10,60 10,60 60,60 60,10 10,10 10,60 10,60 10,70 10,70 0,70 0,70"/>
+                <path class="logo__fill" fill="none" stroke-width="10"
+                      d="M5 ,70 5,5 0,5 0,5 65 ,5 65, 65 65, 65 65, 65 5, 65 5"/>
+            </g>
         </g>
-        <g class="logo__colorGroup">
-            <path class="logo__stroke" fill="none" stroke-width="1"
-                  d="M0,70 0,0 0,0 70,0 70,70 70,70 10,70 10,60 10,60 60,60 60,10 10,10 10,60 10,60 10,70 10,70 0,70 0,70"/>
-            <path class="logo__fill" fill="none" stroke-width="10"
-                  d="M5 ,70 5,5 0,5 0,5 65 ,5 65, 65 65, 65 65, 65 5, 65 5"/>
-        </g>
-    </g>
-</svg>
+    </svg>
 </a>
 <section class="top">
-       <div class="top__box">
-           <div class="links">
-               <ul>
-                   <li><a href="/">Home</a></li>
-                   <li><a href="/#about">About</a></li>
-                   <li><a href="/#contact">Contact</a></li>
-               </ul>
+    <div class="top__box">
+        <div class="mobile__popup">
+            <ul class="mobile__popup__list">
+                <li class="mobile__popup__item"><a href="/" class="mobile__popup__item__link">Home</a></li>
+                <li class="mobile__popup__item"><a href="/" class="mobile__popup__item__link">Reel</a></li>
+                <li class="mobile__popup__item"><a href="/#about" class="mobile__popup__item__link">About</a></li>
+                <li class="mobile__popup__item"><a href="/#contact" class="mobile__popup__item__link">Contact</a></li>
+            </ul>
+            <a href=""><h1 class="email__text">Info<span>@Bourkefilms.com</span></h1></a>
 
-           </div>
+
+            <div class="footer__box wrapper__center">
+                <div class="footer__box__items"><h1><a href="">Vm</a></h1></div>
+                <div class="footer__box__items"><h1><a href="">Inst</a></h1></div>
+                <div class="footer__box__items"><h1><a href="">Tw</a></h1></div>
+            </div>
+        </div>
+        <div class="mobile__menu ">
+            <input class="mobile__menu__input" type="checkbox" id="checkbox">
+            <label class="mobile__menu__label active" for="checkbox"></label>
+        </div>
+
+        <div class="links">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+
+        </div>
         <a class="arrow__link" href="/sandals">
 
-           <div class="top__animation-horizontal-bottom active full move"></div>
-           <div class="top__animation-horizontal-top active full move"></div>
-           <div class="top__animation-vertical-right active full move"></div>
-           <div class="top__animation-vertical-left active full move"></div>
-           <div class="top__left active white"></div>
-           <div class="top__right active white"></div>
-           <div class="bottom__left active white"></div>
-           <div class="bottom__right active white"></div>
-        <div class="top__animation">
+            <div class="top__animation-horizontal-bottom active full move"></div>
+            <div class="top__animation-horizontal-top active full move"></div>
+            <div class="top__animation-vertical-right active full move"></div>
+            <div class="top__animation-vertical-left active full move"></div>
+            <div class="top__left active white"></div>
+            <div class="top__right active white"></div>
+            <div class="bottom__left active white"></div>
+            <div class="bottom__right active white"></div>
+            <div class="top__animation">
 
 
                 <div class="background__front"></div>
                 <div class="background__behind"></div>
                 <h1 class="background-main-header" aria-label="Comcast Retreat"></h1>
 
-        </div>
+            </div>
         </a>
     </div>
 
     <div class="production">
         <div class="box">
-            <iframe width="1000" height="550" src="https://www.youtube.com/embed/ZoMxqTz02_g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="iframe" width="800" height="450" src="https://www.youtube.com/embed/ZoMxqTz02_g"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <div class="production__box wrapper__center">
             <div class="production__box-img">
@@ -90,7 +112,8 @@
             <div class="production__text-img big">
                 <img src="img/comcast/cam.png" alt="">
             </div>
-            <h1 class="production__text-header">Despite its dystopian feel, “Retreat” was actually filmed in ritzy the resort town of Piriápolis, Uruguay</h1>
+            <h1 class="production__text-header">Despite its dystopian feel, “Retreat” was actually filmed in ritzy the
+                resort town of Piriápolis, Uruguay</h1>
         </div>
         <div class="production__box wrapper__center">
             <div class="production__box-img">
@@ -104,13 +127,22 @@
             <div class="production__text-img">
                 <img src="img/comcast/action.png" alt="">
             </div>
-            <h1 class="production__text-header">The extensive costumes, casting and effects required a Hollywood-caliber, blockbuster production team</h1>
+            <h1 class="production__text-header">The extensive costumes, casting and effects required a
+                Hollywood-caliber, blockbuster production team</h1>
         </div>
         <div class="lines">
-            <a href="/comcast"><div class="line active"></div></a>
-            <a href="/sandals"><div class="line"></div></a>
-            <a href="/training"><div class="line"></div></a>
-            <a href="/perlota"><div class="line"></div></a>
+            <a href="/comcast">
+                <div class="line active"></div>
+            </a>
+            <a href="/sandals">
+                <div class="line"></div>
+            </a>
+            <a href="/training">
+                <div class="line"></div>
+            </a>
+            <a href="/perlota">
+                <div class="line"></div>
+            </a>
         </div>
     </div>
     <div class="background-bottom"></div>

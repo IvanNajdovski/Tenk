@@ -117,10 +117,36 @@ $(document).ready(function() {
             val.style.display = "block";
 
             }
-            val.style.fontSize = "12rem";
+            //val.style.fontSize = "12rem";
             delay = delay + 0.1
             val.classList.add("active")
             val.style.transitionDelay = `${delay}s`
         }
     },500);
+    if($(window).innerWidth() > 800){
+        console.log("hey")
+        $(".iframe").attr("width","800");
+        $(".iframe").attr("height","440");
+    }else if($(window).width() < 350){
+        $(".iframe").attr("width","300");
+        $(".iframe").attr("height","220");
+    }else if($(window).width() < 400){
+        $(".iframe").attr("width","350");
+        $(".iframe").attr("height","265");
+    }else if($(window).width() < 600){
+        $(".iframe").attr("width","400");
+        $(".iframe").attr("height","300");
+    }else if($(window).innerWidth() < 800){
+        console.log("hey")
+        $(".iframe").attr("width","600");
+        $(".iframe").attr("height","350");
+    }
+    $(".mobile__menu__label").on("click",function(){
+        $(".mobile__popup").toggleClass("active")
+    })
+
+
+
+
+
 });

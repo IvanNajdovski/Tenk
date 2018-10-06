@@ -109,6 +109,10 @@ $(document).ready(function () {
     setTimeout(function () {
         $(".logo__dot").addClass("active");
     }, 11000);
+    setTimeout(function () {
+        $(".mobile__menu__label").addClass("active");
+
+    }, 10000);
 
     $(document).on("mousemove", function (e) {
 

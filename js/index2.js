@@ -60,7 +60,7 @@ function carousel() {
     }
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
-    text[myIndex-1].style.display = "block";
+    text[myIndex-1].style.display = "flex";
     // x[myIndex-1].classList.add("active");
     x[myIndex-1].style.display = "block";
     y[myIndex-1].style.display = "block";
