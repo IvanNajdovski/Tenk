@@ -79,12 +79,16 @@
           font-size: 6rem;
           font-weight: 400;
           font-family: $font-primary;
+
           @media only screen and (max-width: $bp-large-small){
             width: 90%;
             flex: 1;
             text-align: center;
             padding-top: 2rem;
+            display: flex;
+            justify-content: center;
           }
+
           &  span{
             transition: all .5s;
             transform: rotateY(-90deg);
@@ -164,6 +168,8 @@
             flex: 1;
             text-align: center;
             padding-top: 2rem;
+            display: flex;
+            justify-content: center;
           }
           &  span{
             transition: all .5s;

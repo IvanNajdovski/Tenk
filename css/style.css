@@ -670,7 +670,9 @@ body {
             width: 90%;
             flex: 1;
             text-align: center;
-            padding-top: 2rem; } }
+            padding-top: 2rem;
+            display: flex;
+            justify-content: center; } }
         .bottom__text__never-variable-header span {
           transition: all .5s;
           transform: rotateY(-90deg);
@@ -735,7 +737,9 @@ body {
             width: 90%;
             flex: 1;
             text-align: center;
-            padding-top: 2rem; } }
+            padding-top: 2rem;
+            display: flex;
+            justify-content: center; } }
         .bottom__text__always-variable-header span {
           transition: all .5s;
           transform: rotateY(-90deg);
