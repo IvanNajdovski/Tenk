@@ -196,7 +196,9 @@ $(document).ready(function () {
             scrollTop:0,
         },2000)
     })
-
+    $(".mobile__menu__label").on("click",function(){
+        $(".mobile__popup").toggleClass("active")
+    })
 
 
 })
