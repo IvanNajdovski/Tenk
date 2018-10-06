@@ -3,7 +3,6 @@ function isScrolledIntoView(a) {
     var docViewBottom = docViewTop + $(window).height();
     var elemTop = a.offset().top;
     var elemBottom = elemTop + a.outerHeight();
-
     if (elemBottom > docViewTop && elemTop < docViewBottom) {
         a.addClass("active");
     } else {
@@ -15,7 +14,6 @@ function border(a){
     if(a.hasClass("active")){
         a.each(function(){
             var number = Math.random()*4
-            console.log("hello")
             $(this).css("transition-delay",`${number}s`);
         })
         setTimeout(function(){
@@ -112,17 +110,13 @@ $(document).ready(function () {
     setTimeout(function () {
         $(".mobile__menu__label").addClass("active");
 
-    }, 10000);
+    }, 6000);
 
     $(document).on("mousemove", function (e) {
-
         var pageX = e.pageX;
         var pageMiddle = $(window).outerWidth() / 2
-        //console.logpa
         if ($(".mySlides__background").hasClass("active")) {
-
             if (pageX > pageMiddle) {
-
                 $(".mySlides.active").css("transform", `matrix(1,0,0,1,${(pageX - pageMiddle) / 20},${(pageX - pageMiddle) / 20}`);
                 $(".mySlides__background").css("transform", `matrix(1,0,0,1,-${(pageX - pageMiddle) / 20},-${(pageX - pageMiddle) / 20}`);
             } else {
@@ -145,15 +139,13 @@ $(document).ready(function () {
         isScrolledIntoView($(".awards_-box-header-logo-img-3"));
         isScrolledIntoView($(".awards_-box-header-logo-img-4"));
         isScrolledIntoView($(".sayhi__header"));
-
-
         isScrolledIntoViewClassStay($(".border"));
         border($(".border"))
 
 
     });
 //------ LINK ANIMATION --------
-    $(".about__box-link").on("click", function(e){
+    $(".box-link").on("click", function(e){
         if(this.hash !==""){
             e.preventDefault()
             var hash = this.hash
@@ -195,10 +187,16 @@ $(document).ready(function () {
         $("html,body").animate({
             scrollTop:0,
         },2000)
-    })
+    });
     $(".mobile__menu__label").on("click",function(){
-        $(".mobile__popup").toggleClass("active")
-    })
+        $(".mobile__popup").toggleClass("active");
+    });
+    $(".mobile__popup__item").on("click",function(){
+
+        $(".mobile__menu__input").prop("checked", false);
+        $(".mobile__popup").removeClass("active");
+
+    });
 
 
 })
