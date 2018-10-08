@@ -1307,7 +1307,7 @@ body {
 .footer__box {
   position: relative;
   background-color: #000;
-  z-index: 10;
+  z-index: 1000;
   padding: 2rem 0;
   display: flex;
   justify-content: space-evenly; }
