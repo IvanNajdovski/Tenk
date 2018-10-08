@@ -197,6 +197,13 @@ $(document).ready(function () {
         $(".mobile__popup").removeClass("active");
 
     });
+    var one = 1.5454;
+    var three = "zelka";
+    localStorage.setItem("three",JSON.stringify(three))
+    localStorage.setItem("one",JSON.stringify(one))
+    var two = localStorage.getItem(one,JSON.parse(one))
+    console.log(localStorage)
+    console.log(two)
 
 
 })

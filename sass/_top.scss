@@ -505,6 +505,10 @@
     font-family: $font-secondary;
     font-weight: 400;
     font-size: 1.8rem;
+    & > .box-link{
+      text-decoration: none;
+      color: inherit;
+    }
   }
   &:before{
     display: block;

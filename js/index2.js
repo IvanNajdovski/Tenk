@@ -3,7 +3,7 @@ var myIndexTwo = 0;
 // --------------FUNCTION FOR THE LINK SEE MORE--------------
  function index(a){
      var link = document.getElementsByClassName("see__box-link");
-     
+
      if(a-1===0){
          link[0].setAttribute("href","/comcast")
      }else if(a-1===1){

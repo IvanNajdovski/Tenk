@@ -20,7 +20,7 @@ $(document).ready(function() {
         var mouseX = e.pageX;
         var mouseY = e.pageY;
         var page = $(window).outerWidth()/2;
-        console.log(mouseX,mouseY)
+
         if(mouseX > page && mouseY < 600){
 
             $(".background__front").css("cursor","url(../img/right-arrow.png), auto");
@@ -96,7 +96,7 @@ $(document).ready(function() {
     });
     var $header=$(".background-main-header");
     var $text = $(".background-main-header").attr("aria-label").split("");
-    console.log($text)
+
 
 
     for(let item of $text){
@@ -105,7 +105,7 @@ $(document).ready(function() {
     }
     setTimeout(function(){
         var allSpans = $(".top-span");
-        console.log(allSpans)
+
         let delay =0;
         for(let val of allSpans){
             console
@@ -124,7 +124,7 @@ $(document).ready(function() {
         }
     },500);
     if($(window).innerWidth() > 800){
-        console.log("hey")
+
         $(".iframe").attr("width","800");
         $(".iframe").attr("height","440");
     }else if($(window).width() < 350){
@@ -137,14 +137,17 @@ $(document).ready(function() {
         $(".iframe").attr("width","400");
         $(".iframe").attr("height","300");
     }else if($(window).innerWidth() < 800){
-        console.log("hey")
+
         $(".iframe").attr("width","600");
         $(".iframe").attr("height","350");
     }
     $(".mobile__menu__label").on("click",function(){
         $(".mobile__popup").toggleClass("active")
     })
-
+    var three = localStorage.getItem("one")
+    var ivan = localStorage.getItem("three")
+    console.log(ivan)
+    console.log(three)
 
 
 
